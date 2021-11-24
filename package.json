@@ -1,0 +1,15 @@
+{
+  "name": "js-docker-foo",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "First Last <first.last@example.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start-docker": "docker run --name \"js-docker-foo\" -p 8081:8080 -d alphonso77/node-web-app",
+    "stop-docker": "docker stop js-docker-foo"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
