@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node server.js",
     "start-docker": "docker run --name \"js-docker-foo\" -p 8081:8080 -d alphonso77/node-web-app",
-    "stop-docker": "docker stop js-docker-foo"
+    "stop-docker": "docker stop js-docker-foo",
+    "build-docker": "docker build . -t alphonso77/node-web-app"
   },
   "dependencies": {
     "express": "^4.16.1"
