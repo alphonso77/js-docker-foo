@@ -6,6 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon --inspect-brk=0.0.0.0 server.js",
+    "start.dev": "nodemon -L --inspect-brk=0.0.0.0",
     "build-docker": "docker build . -t alphonso77/node-web-app",
     "run-docker": "docker run --rm -d  -p 8080:8080 -p  9229:9229  alphonso77/node-web-app"
   },
