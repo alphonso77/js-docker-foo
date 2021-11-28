@@ -5,12 +5,14 @@
   "author": "First Last <first.last@example.com>",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "start-docker": "docker run --name \"js-docker-foo\" -p 8081:8080 -d alphonso77/node-web-app",
-    "stop-docker": "docker stop js-docker-foo",
-    "build-docker": "docker build . -t alphonso77/node-web-app"
+    "start": "nodemon --inspect-brk=0.0.0.0 server.js",
+    "build-docker": "docker build . -t alphonso77/node-web-app",
+    "run-docker": "docker run --rm -d  -p 8080:8080 -p  9229:9229  alphonso77/node-web-app"
   },
   "dependencies": {
     "express": "^4.16.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
